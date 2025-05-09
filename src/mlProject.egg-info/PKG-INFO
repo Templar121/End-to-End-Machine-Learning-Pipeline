@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: mlProject
+Version: 0.0.0
+Summary: A small python package for ml app
+Home-page: https://github.com/Templar121/End-to-End-Machine-Learning-Pipeline
+Author: Templar121
+Author-email: subhayanmukherjee78@gmail.com
+Project-URL: Bug Tracker, https://github.com/Templar121/End-to-End-Machine-Learning-Pipeline/issues
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: project-url
+Dynamic: summary
+
+# End to End Machine Learning Pipeline
+
+## How to run ?
+### STEPS:
+
+
+clone the repository
+
+```bash
+https://github.com/Templar121/End-to-End-Machine-Learning-Pipeline
+```
+
+### STEP A - Create a conda environment after opening the repository
+
+```bash
+conda create -n mlproj python=3.8 -y
+```
+
+```bash
+conda activate mlproj
+```
+
+### OR
+### STEP B - Create a venv environment
+
+```bash
+python -m venv mlproj
+```
+
+```bash
+source mlproj/Scripts/activate
+```
+
+
+### STEP 02 - Install the Requirements
+
+```bash
+pip install -r requirements.txt
+```
