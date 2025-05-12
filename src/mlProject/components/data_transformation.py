@@ -34,43 +34,4 @@ class DataTransformation:
         print(test.shape)
         
         
-    def feature_transformation(self):
-        # Load train and test data
-        train = pd.read_csv(os.path.join(self.config.root_dir, "train.csv"))
-        test = pd.read_csv(os.path.join(self.config.root_dir, "test.csv"))
-
-        # Dynamically infer feature columns (excluding the target column 'quality')
-        target_column = 'quality'
-        feature_columns = [col for col in train.columns if col != target_column]
-
-        X_train = train[feature_columns]
-        X_test = test[feature_columns]
-        y_train = train[target_column]
-        y_test = test[target_column]
-
-        # Define the pipeline
-        feature_pipeline = Pipeline([
-            ('scaler', StandardScaler()),
-            ('poly', PolynomialFeatures(degree=2, include_bias=False))
-        ])
-
-        # Transform features
-        X_train_transformed = feature_pipeline.fit_transform(X_train)
-        X_test_transformed = feature_pipeline.transform(X_test)
-
-        # Convert to DataFrames
-        train_transformed_df = pd.DataFrame(X_train_transformed)
-        train_transformed_df[target_column] = y_train.values
-
-        test_transformed_df = pd.DataFrame(X_test_transformed)
-        test_transformed_df[target_column] = y_test.values
-
-        # Save transformed data
-        train_path = os.path.join(self.config.root_dir, "train_transformed.csv")
-        test_path = os.path.join(self.config.root_dir, "test_transformed.csv")
-        train_transformed_df.to_csv(train_path, index=False)
-        test_transformed_df.to_csv(test_path, index=False)
-
-        logger.info("Saved transformed train and test datasets to CSV")
-        print("X_train_transformed shape:", X_train_transformed.shape)
-        print("X_test_transformed shape:", X_test_transformed.shape)
+    
