@@ -51,3 +51,5 @@ source mlproj/Scripts/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+🚀 **Live Demo**: [https://end-to-end-machine-learning-pipeline-qskv.onrender.com/](https://end-to-end-machine-learning-pipeline-qskv.onrender.com/)
