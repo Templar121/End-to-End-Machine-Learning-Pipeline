@@ -3,6 +3,22 @@
 🚀 **Live Demo**: [https://end-to-end-machine-learning-pipeline-qskv.onrender.com/](https://end-to-end-machine-learning-pipeline-qskv.onrender.com/)
 
 
+
+---
+
+## 🧭 API Endpoints
+
+| Endpoint       | Description                                           |
+|----------------|-------------------------------------------------------|
+| `/train`       | ✅ **Train the model** — must be run first before using `/predict`. |
+| `/predict`     | 🔍 Submit input data and get predictions.             |
+| `/home` or `/` | 🏠 Web interface to interact with the model.          |
+
+> ⚠️ **Important**: Visit `/train` once after deployment to build and save the model.
+
+---
+
+
 ## WorkFlows
 
 
